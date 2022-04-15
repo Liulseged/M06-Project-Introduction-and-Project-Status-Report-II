@@ -1,0 +1,87 @@
+#Import everything from tkinter
+from tkinter import *
+from tokenize import Number
+
+window = Tk()
+window.title("Calculator")
+window.geometry()
+window.configure(background="light blue")
+
+entry = Entry(window, width=50, borderwidth=20 )
+entry.grid(row=0, column=0, columnspan=10, padx=20, pady=14)
+#entry.insert (0, "Calculator" )
+
+def button_press(number):
+    #return
+  current = entry.get()
+  entry.delete(0, END)
+  entry.insert(0, str(current) + str (number))
+
+#define your buttons
+
+button_1 = Button(window, text="1", fg='white', bg='purple', padx=50, pady=25, command=lambda: button_press(1))
+button_2 = Button(window, text="2", fg='white', bg='purple', padx=50, pady=25, command=lambda: button_press(2))
+button_3 = Button(window, text="3", fg='white', bg='purple', padx=50, pady=25, command=lambda: button_press(3))
+button_4 = Button(window, text="4", fg='white', bg='purple', padx=50, pady=25, command=lambda: button_press(4))
+button_5 = Button(window, text="5", fg='white', bg='purple', padx=50, pady=25, command=lambda: button_press(5))
+button_6 = Button(window, text="6", fg='white', bg='purple', padx=50, pady=25, command=lambda: button_press(6))
+button_7 = Button(window, text="7", fg='white', bg='purple', padx=50, pady=25, command=lambda: button_press(7))
+button_8 = Button(window, text="8", fg='white', bg='purple', padx=50, pady=25, command=lambda: button_press(8))
+button_9 = Button(window, text="9", fg='white', bg='purple', padx=50, pady=25, command=lambda: button_press(9))
+button_0 = Button(window, text="0", fg='white', bg='purple', padx=50, pady=25, command=lambda: button_press(0))
+button_clear = Button(window, text="clear", fg='white', bg='orange', padx=40, pady=25, command=lambda: button_press(clear))
+button_subtract = Button(window, text="-", fg='white', bg='orange', padx=50, pady=25, command=lambda: button_press(button_subtract))
+button_add = Button(window, text="+", fg='white', bg='orange', padx=50, pady=25, command=lambda: button_press(add))
+button_divide = Button(window, text="/", fg='white', bg='orange', padx=50, pady=25, command=lambda: button_press(divide))
+button_equal = Button(window, text="=", fg='white', bg='orange', padx=50, pady=25, command=lambda: button_press(equal))
+
+
+#creating and display each buttons in order 
+
+button_1.grid(row=1, column=0),button_2.grid(row=1, column=1),button_3.grid(row=1, column=2)
+button_4.grid(row=2, column=0),button_5.grid(row=2, column=1),button_6.grid(row=2, column=2)
+button_7.grid(row=3, column=0),button_8.grid(row=3, column=1),button_9.grid(row=3, column=2)
+button_add.grid(row=4, column=1),button_0.grid(row=4, column=2),button_subtract.grid(row=4, column=0)
+button_divide.grid(row=5, column=1),button_equal.grid(row=5, column=2),button_clear.grid(row=5, column=0)
+
+window.mainloop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
