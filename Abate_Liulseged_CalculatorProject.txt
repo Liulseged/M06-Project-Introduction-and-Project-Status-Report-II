@@ -3,8 +3,6 @@
 
 #Import everything from tkinter
 from tkinter import *
-from tokenize import Number
-
 window = Tk()
 window.title("Calculator")
 window.geometry()
@@ -20,7 +18,7 @@ def button_press(number):
   entry.delete(0, END)
   entry.insert(0, str(current) + str (number))
 
-#define your buttons
+#organize each buttons
 
 button_1 = Button(window, text="1", fg='white', bg='purple', padx=50, pady=25, command=lambda: button_press(1))
 button_2 = Button(window, text="2", fg='white', bg='purple', padx=50, pady=25, command=lambda: button_press(2))
@@ -39,7 +37,7 @@ button_divide = Button(window, text="/", fg='white', bg='orange', padx=50, pady=
 button_equal = Button(window, text="=", fg='white', bg='orange', padx=50, pady=25, command=lambda: button_press(equal))
 
 
-#creating and display each buttons in order 
+#creating and display each buttons. 
 
 button_1.grid(row=1, column=0),button_2.grid(row=1, column=1),button_3.grid(row=1, column=2)
 button_4.grid(row=2, column=0),button_5.grid(row=2, column=1),button_6.grid(row=2, column=2)
